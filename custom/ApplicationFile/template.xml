@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="Aplication File"
+    minApi="14"
+    description="Creates a new custom aplication file."
+    >
+
+    <category value="custom" />
+
+    <parameter
+        id="applicationName"
+        name="Aplication Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MyAplication"
+        help="Name of the Aplication." />
+
+    <execute file="recipe.xml.ftl" />
+
+</template>
