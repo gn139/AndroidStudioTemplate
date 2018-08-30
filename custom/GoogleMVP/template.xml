@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="5"
+    name="GoogleMVP"
+    minApi="7"
+    minBuildApi="14"
+    description="a Template of Google MVP Sample">
+
+    <category value="Custom" />
+    <formfactor value="Mobile" />
+
+    <!-- input data -->
+    
+
+    <parameter
+        id="activityClass"
+        name="Activity Name"
+        type="string"
+        default="MainActivity"
+        constraints="class|unique|nonempty"
+        help="The name of the activity class to create" />
+
+    <parameter
+        id="activityLayoutName"
+        name="Activity Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="activity_${classToResource(activityClass)}"
+        help="The name of  the layout to create for the activity" />
+
+    <parameter
+        id="contractClass"
+        name="Contract Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}Contract"
+        help="The name of the contract class" />
+
+    <parameter
+        id="presenterClass"
+        name="Presenter Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}Presenter"
+        help="The name of the presenter" />
+
+    <parameter
+        id="fragmentClass"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}Fragment"
+        help="The name of the fragment" />
+
+    <parameter
+        id="fragmentLayoutName"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="fragment_${classToResource(activityClass)}"
+        help="The name of the layout to create for the fragment" />
+
+    <parameter
+        id="constraintLayout"
+        name="ConstraintLayout"
+        type="boolean"
+        help="If the you don't implement ConstraintLayout, you should tick it." />
+
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>

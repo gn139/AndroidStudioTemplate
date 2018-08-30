@@ -14,9 +14,19 @@ Custom Android Studio templates/自定义 Android Studio 模板
 
 ## 内容
 
-### Application File
+#### Application File
 
 一个继承 Application 的自定义 Application 类，创建时可以修改名称。其中已实现通过监听 Activity 生命周期对 Activity 进行管理的方法。
+
+### 更新
+
+#### GoogleMVP 2018/8/30
+
+这是根据 [Google todo-mvp](https://github.com/googlesamples/android-architecture/tree/todo-mvp/) 修改的用于创建符合 MVP 架构的单元文件夹，包括 activity、contract、fragment 和 presenter，并且同时创建 activity 和 fragment 的布局文件然后在 Androidmanifest 中注册。
+
+> 注意由于使用了 ConstraintLayout, 如果未导入该包请勾选下图选项后 Sync 项目。
+
+![](GoogleMVP.png)
 
 ## Credits
 作者：gn_139  

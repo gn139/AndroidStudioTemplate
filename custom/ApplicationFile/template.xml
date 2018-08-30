@@ -7,7 +7,7 @@
     description="Creates a new custom aplication file."
     >
 
-    <category value="custom" />
+    <category value="Custom" />
 
     <parameter
         id="applicationName"
